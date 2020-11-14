@@ -1,4 +1,4 @@
--Video Rental Store Application
+#Video Rental Store Application
 
 Appliication used to simulate how a video rental store's database would operate.
 Functionality includes:
