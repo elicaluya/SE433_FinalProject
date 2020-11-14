@@ -1,0 +1,9 @@
+*.iml
+.idea
+VideoRental/.settings
+VideoRental/.project
+VideoRental/.classpath
+VideoRental/build
+VideoRental/out
+VideoRental/doc
+VideoRental/javadoc_files
