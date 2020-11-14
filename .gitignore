@@ -3,6 +3,8 @@
 VideoRental/.settings
 VideoRental/.project
 VideoRental/.classpath
+build
+out
 VideoRental/build
 VideoRental/out
 VideoRental/doc
