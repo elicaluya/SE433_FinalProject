@@ -27,3 +27,8 @@ With the text argument, the video rental will display in the command line.
 ```
 mvn test
 ```
+
+### Contributors
+Jacob Crawford  
+David Engel  
+Elijah Caluya  
