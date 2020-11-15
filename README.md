@@ -1,6 +1,6 @@
-Video Rental Store Application
+# Video Rental Store Application
 
-Appliication used to simulate how a video rental store's database would operate.
+Application used to simulate how a video rental store's database would operate.
 Functionality includes:
 - Checking in/out video
 - Display current inventory
@@ -17,3 +17,8 @@ java Main text
 
 with the pop argument, the video rental will display in a GUI
 with the text argument, the video rental will display in the command line.
+
+### Testing
+```
+mvn test
+```
