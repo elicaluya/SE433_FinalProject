@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 // TODO:  complete the tests
-public class VideoTEST {
+public class VideoTest {
 //  public VideoTEST(String name) {
 //    super(name);
 //  }

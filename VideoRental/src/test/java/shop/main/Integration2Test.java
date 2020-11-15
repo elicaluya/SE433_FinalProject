@@ -9,7 +9,7 @@ import shop.data.Data;
 import shop.data.Video;
 import shop.data.Inventory;
 
-public class TEST2 {
+public class Integration2Test {
 //  public TEST2(String name) {
 //    super(name);
 //  }

@@ -15,7 +15,7 @@ import java.util.Iterator;
 // add in some videos, check out, check in, delete videos, etc.
 // check that errors are reported when necessary.
 // check that things are going as expected.
-public class TEST1 {
+public class Integration1Test {
 //  public TEST1(String name) {
 //    super(name);
 //  }

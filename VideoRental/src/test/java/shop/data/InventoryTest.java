@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 // TODO:  complete the tests
-public class InventoryTEST {
+public class InventoryTest {
 //  public InventoryTEST(String name) {
 //    super(name);
 //  }

@@ -3,7 +3,7 @@ package shop.command;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CommandHistoryTEST {
+public class CommandHistoryTest {
 //  public CommandHistoryTEST(String name) {
 //    super(name);
 //  }
@@ -78,14 +78,14 @@ public class CommandHistoryTEST {
       // Using "CommandHistoryTEST.this" to make references to
       // outer class instance explicit
       public boolean run() {
-        CommandHistoryTEST.this._didRun = true;
+        CommandHistoryTest.this._didRun = true;
         return true;
       }
       public void undo() {
-        CommandHistoryTEST.this._didUndo = true;
+        CommandHistoryTest.this._didUndo = true;
       }
       public void redo() {
-        CommandHistoryTEST.this._didRedo = true;
+        CommandHistoryTest.this._didRedo = true;
       }
     }
 

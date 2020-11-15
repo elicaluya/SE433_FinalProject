@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 // TODO:  complete the tests
-public class DataTEST {
+public class DataTest {
 //  public DataTEST(String name) {
 //    super(name);
 //  }
