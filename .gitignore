@@ -1,5 +1,12 @@
 .DS_Store
-VideoRental/*.iml
+*.iml
+.idea
+.project
+.settings
+.classpath
+out
+build
+target
 VideoRental/.idea
 VideoRental/.settings
 VideoRental/.project

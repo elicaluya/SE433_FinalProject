@@ -30,6 +30,6 @@ mvn test
 ```
 
 ### Contributors
-Jacob Crawford
-David Engel
-Elijah Caluya
+Jacob Crawford  
+David Engel  
+Elijah Caluya  
