@@ -1,6 +1,7 @@
 # Video Rental Store Application
 
 Application used to simulate how a video rental store's database would operate.
+
 Functionality includes:
 - Checking in/out video
 - Display current inventory
@@ -8,15 +9,19 @@ Functionality includes:
 - Add and remove videos from database
 - Ability to operate via GUI or command line
 
-Contains unit tests as well using JUnit
+Contains unit tests created with JUnit.
 
-To run:
+### Usage
+```
 java Main pop
+```
 or
+```
 java Main text
+```
 
-with the pop argument, the video rental will display in a GUI
-with the text argument, the video rental will display in the command line.
+With the pop argument, the video rental will display in a GUI.
+With the text argument, the video rental will display in the command line.
 
 ### Testing
 ```
