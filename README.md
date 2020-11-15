@@ -20,5 +20,5 @@ with the text argument, the video rental will display in the command line.
 
 ### Testing
 ```
-mvn tests
+mvn test
 ```
