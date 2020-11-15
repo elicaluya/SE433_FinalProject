@@ -1,3 +1,4 @@
+
 # Video Rental Store Application
 
 Application used to simulate how a video rental store's database would operate.
@@ -27,3 +28,8 @@ With the text argument, the video rental will display in the command line.
 ```
 mvn test
 ```
+
+### Contributors
+Jacob Crawford
+David Engel
+Elijah Caluya
