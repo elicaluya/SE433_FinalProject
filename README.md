@@ -17,3 +17,8 @@ java Main text
 
 with the pop argument, the video rental will display in a GUI
 with the text argument, the video rental will display in the command line.
+
+### Testing
+```
+mvn tests
+```
