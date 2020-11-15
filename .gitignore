@@ -1,11 +1,11 @@
-*.iml
-.idea
+.DS_Store
+VideoRental/*.iml
+VideoRental/.idea
 VideoRental/.settings
 VideoRental/.project
 VideoRental/.classpath
-build
-out
 VideoRental/build
 VideoRental/out
+VideoRental/target
 VideoRental/doc
 VideoRental/javadoc_files

@@ -1,6 +1,6 @@
-#Video Rental Store Application
+# Video Rental Store Application
 
-Appliication used to simulate how a video rental store's database would operate.
+Application used to simulate how a video rental store's database would operate.
 Functionality includes:
 - Checking in/out video
 - Display current inventory

@@ -1,26 +1,29 @@
 package shop.command;
 
-import junit.framework.Assert;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-public class CommandHistoryTEST extends TestCase {
-  public CommandHistoryTEST(String name) {
-    super(name);
-  }
+public class CommandHistoryTEST {
+//  public CommandHistoryTEST(String name) {
+//    super(name);
+//  }
 
+  @Test
   public void testEmptyExceptions() {
     CommandHistoryObj h = new CommandHistoryObj();
-    Assert.assertSame(null, h.topUndoCommand());
-    Assert.assertSame(null, h.topRedoCommand());
-    Assert.assertFalse(h.getUndo().run());
-    Assert.assertFalse(h.getRedo().run());
+    Assertions.assertSame(null, h.topUndoCommand());
+    Assertions.assertSame(null, h.topRedoCommand());
+    Assertions.assertFalse(h.getUndo().run());
+    Assertions.assertFalse(h.getRedo().run());
   }
 
+  @Test
   private void checkStacks(CommandHistoryObj h, UndoableCommand topUndo, UndoableCommand topRedo) {
-    Assert.assertSame(topUndo, h.topUndoCommand());
-    Assert.assertSame(topRedo, h.topRedoCommand());
+    Assertions.assertSame(topUndo, h.topUndoCommand());
+    Assertions.assertSame(topRedo, h.topRedoCommand());
   }
 
+  @Test
   public void testThatTopIsSetByAddUndoAndRedo() {
     CommandHistoryObj h = new CommandHistoryObj();
 
@@ -67,6 +70,7 @@ public class CommandHistoryTEST extends TestCase {
   private boolean _didUndo;
   private boolean _didRedo;
 
+  @Test
   public void testThatMethodsArePerformed() {
     CommandHistoryObj h = new CommandHistoryObj();
 
@@ -89,14 +93,14 @@ public class CommandHistoryTEST extends TestCase {
 
     _didRun = _didUndo = _didRedo = false;
     h.add(x);
-    Assert.assertTrue(!_didRun && !_didUndo && !_didRedo);
+    Assertions.assertTrue(!_didRun && !_didUndo && !_didRedo);
 
     _didRun = _didUndo = _didRedo = false;
     h.getUndo().run();
-    Assert.assertTrue(!_didRun && _didUndo && !_didRedo);
+    Assertions.assertTrue(!_didRun && _didUndo && !_didRedo);
 
     _didRun = _didUndo = _didRedo = false;
     h.getRedo().run();
-    Assert.assertTrue(!_didRun && !_didUndo && _didRedo);
+    Assertions.assertTrue(!_didRun && !_didUndo && _didRedo);
   }
 }
