@@ -1,5 +1,7 @@
 package shop.command;
 
+import java.util.EmptyStackException;
+
 /**
  * An unbounded list of commands with undo/redo capability.
  *
@@ -12,7 +14,7 @@ public interface CommandHistory {
    * @param cmd the command to be run.
    */
   public void add(UndoableCommand cmd);
-  
+
   /**
    * Returns a <code>RerunnableCommand</code> that, when run does the following:
    * Pop command from <code>undoable</code>, undo it, then push it

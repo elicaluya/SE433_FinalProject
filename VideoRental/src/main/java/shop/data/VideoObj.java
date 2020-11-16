@@ -7,102 +7,101 @@ import java.util.HashMap;
  * @see Data
  */
 final class VideoObj implements Video {
-  private final String _title;
-  private final int    _year;
-  private final String _director;
+	private final String _title;
+	private final int    _year;
+	private final String _director;
 
-  /**
-   * Initialize all object attributes.
-   * Title and director are "trimmed" to remove leading and final space.
-   * @throws IllegalArgumentException if object invariant violated.
-   */
-  VideoObj(String title, int year, String director) {	  
-	  if (  (title == null)
-		        || (director == null)
-		        || (year <= 1800)
-		        || (year >= 5000)) {
-		      throw new IllegalArgumentException();
-	  }
-	  title = title.trim();
-	  director = director.trim();
-	  if (  ("".equals(title))
-			  || ("".equals(director))) {
-		  throw new IllegalArgumentException();
-	  }
-	  
-	  _title = title;
-	  _director = director;
-	  _year = year;
-  }
+	/**
+	 * Initialize all object attributes.
+	 * Title and director are "trimmed" to remove leading and final space.
+	 * @throws IllegalArgumentException if object invariant violated.
+	 */
+	VideoObj(String title, int year, String director) {
+		if (  (title == null)
+				|| (director == null)
+				|| (year <= 1800)
+				|| (year >= 5000)) {
+			throw new IllegalArgumentException();
+		}
+		title = title.trim();
+		director = director.trim();
+		if (  ("".equals(title))
+				|| ("".equals(director))) {
+			throw new IllegalArgumentException();
+		}
 
-  public String director() {
-    // TODO  
-    return _director;
-  }
+		_title = title;
+		_director = director;
+		_year = year;
+	}
 
-  public String title() {
-    // TODO  
-    return _title;
-  }
+	public String director() {
 
-  public int year() {
-    // TODO  
-    return _year;
-  }
-  
+		return _director;
+	}
 
-  public boolean equals(Object thatObject) {
-    // TODO  
-	  if (thatObject != null ) {
-		  if (this.hashCode() == thatObject.hashCode()) return true;
-	  }
-	
-    return false;
-  }
+	public String title() {
 
-  public int hashCode() {
-    // TODO  
-	  int hcode = 17;
-	  hcode = 37*hcode + _title.hashCode();
-	  hcode = 37*hcode + _year;
-	  hcode = 37*hcode + _director.hashCode();
-	  return hcode;
-  }
+		return _title;
+	}
 
-  public int compareTo(Object thatObject) {
-    // TODO  
-	// Cast the object from argument into a VideoObj
+	public int year() {
+
+		return _year;
+	}
+
+
+	public boolean equals(Object thatObject) {
+		if (thatObject != null ) {
+			if (this.hashCode() == thatObject.hashCode()) return true;
+		}
+
+		return false;
+	}
+
+	public int hashCode() {
+
+		int hcode = 17;
+		hcode = 37*hcode + _title.hashCode();
+		hcode = 37*hcode + _year;
+		hcode = 37*hcode + _director.hashCode();
+		return hcode;
+	}
+
+	public int compareTo(Object thatObject) {
+
+		// Cast the object from argument into a VideoObj
 		VideoObj obj = (VideoObj) thatObject;
-			  
+
 		// First compare which title is greater
 		if (_title.compareTo(obj._title) < 0)
 			return -1;
 		else if (_title.compareTo(obj._title) > 0)
 			return 1;
-			  
-		// If the titles are the same then compare the years
+
+			// If the titles are the same then compare the years
 		else if (_title.compareTo(obj._title) == 0) {
 			if (_year < obj._year)
 				return -1;
 			else if (_year > obj._year)
 				return 1;
-				  
-			// if the years are the same then compare the directors
+
+				// if the years are the same then compare the directors
 			else if (_year == obj._year) {
 				if (_director.compareTo(obj._director) < 0)
 					return -1;
 				else if (_director.compareTo(obj._director) > 0)
 					return 1;
-				// If all of the information is the same then the two VideoObj objects are equal and return 0
+					// If all of the information is the same then the two VideoObj objects are equal and return 0
 				else
 					return 0;
-			}	
+			}
 		}
-	    return -1;
-  }
+		return -1;
+	}
 
-  public String toString() {
-    // TODO  
-	  return _title.trim() + " (" + Integer.toString(_year) + ") : " + _director.trim();
-  }
+	public String toString() {
+
+		return _title.trim() + " (" + Integer.toString(_year) + ") : " + _director.trim();
+	}
 }
