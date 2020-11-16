@@ -3,15 +3,10 @@ package shop.data;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-// TODO:  complete the tests
 public class VideoTest {
-//  public VideoTEST(String name) {
-//    super(name);
-//  }
 
   @Test
-  public void testEquals() { 
-    // TODO 
+  public void testEquals() {
 	  String title = "A";
 	  int year = 2009;
 	  String director = "Zebra";
@@ -28,8 +23,7 @@ public class VideoTest {
   }
 
   @Test
-  public void testCompareTo() { 
-    // TODO  
+  public void testCompareTo() {
 	  String title = "A", title2 = "B";
 	  int year = 2009, year2 = 2010;
 	  String director = "Zebra", director2 = "Zzz";
@@ -58,8 +52,7 @@ public class VideoTest {
   }
 
   @Test
-  public void testToString() { 
-    // TODO
+  public void testToString() {
 	  String s = new VideoObj("A",2000,"B").toString();
 	  Assertions.assertEquals( s, "A (2000) : B" );
 	  s = new VideoObj(" A ",2000," B ").toString();

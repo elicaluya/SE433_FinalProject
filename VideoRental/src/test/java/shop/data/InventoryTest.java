@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Iterator;
 
-// TODO:  complete the tests
 public class InventoryTest {
 
   @Test

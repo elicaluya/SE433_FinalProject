@@ -10,9 +10,6 @@ import shop.data.Video;
 import shop.data.Inventory;
 
 public class Integration2Test {
-//  public TEST2(String name) {
-//    super(name);
-//  }
 
   @Test
   public void test1() {
