@@ -3,11 +3,7 @@ package shop.data;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-// TODO:  complete the tests
 public class DataTest {
-//  public DataTEST(String name) {
-//    super(name);
-//  }
 
   @Test
   public void testConstructorAndAttributes() {
@@ -63,7 +59,6 @@ public class DataTest {
 
   @Test
   public void testConstructorExceptionDirector() {
-    // TODO  
 	  try {
 	      Data.newVideo("A", 2002, null);
 	      Assertions.fail();

@@ -44,5 +44,4 @@ public class UIFormMenuFactory <P,T> implements UIFormMenu{
 		      return true;		
 		return u.run(input);
 	}
-	
 }

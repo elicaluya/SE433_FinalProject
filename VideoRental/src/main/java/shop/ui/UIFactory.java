@@ -14,8 +14,7 @@ public class UIFactory implements UI{
   	public UIFactory (String s) {
 		if (s.equals("pop")) {
   			typeText = false;
-  		}
-  		else if (s.equals("text")) {
+  		} else if (s.equals("text")) {
   			typeText = true;
   			_in = new BufferedReader(new InputStreamReader(System.in));
   		    _out = System.out;
@@ -60,9 +59,7 @@ public class UIFactory implements UI{
   		    String response = getResponse();
 
   		    runMenuAction(menu,response);
-  		}
-
-  		else {
+  		} else {
   			StringBuffer b = new StringBuffer();
   		    b.append(menu.getHeading());
   		    b.append("\n");
@@ -75,7 +72,7 @@ public class UIFactory implements UI{
   		    }
 
   		    String response = JOptionPane.showInputDialog(b.toString());
-  		    runMenuAction(menu,response);
+  		    runMenuAction(menu, response);
   		}
   	}
 
@@ -92,23 +89,20 @@ public class UIFactory implements UI{
   				if (form.checkInput(i, r, (UIFormTest) form.getT(i))) {
   					s[i] = r;
   					i++;
-  				}
-  				else {
+  				} else {
   					displayError("Error processing form input");
   				}
   			}
-  		}
-  		
-  		else {
+  		} else {
   			while (i < form.size()) {
   				String r = JOptionPane.showInputDialog(form.getP(i));
-  				if (r == null)
-  					r = "";
+  				if (r == null) {
+					r = "";
+				}
   				if (form.checkInput(i, r, (UIFormTest) form.getT(i))) {
   					s[i] = r;
   					i++;
-  				}
-  				else {
+  				} else {
   					displayError("Error processing form");
   				}
   			}
@@ -121,9 +115,8 @@ public class UIFactory implements UI{
   	public void displayMessage(String message) {
   		if (typeText) {
   			_out.println(message);
-  		}
-  		else {
-  			JOptionPane.showMessageDialog(null,message);
+  		} else {
+  			JOptionPane.showMessageDialog(null, message);
   		}
   	}
 
@@ -131,9 +124,8 @@ public class UIFactory implements UI{
   	public void displayError(String message) {
   		if (typeText) {
   			_out.println(message);
-  		}
-  		else {
-  			JOptionPane.showMessageDialog(null,message,"Error",JOptionPane.ERROR_MESSAGE);
+  		} else {
+  			JOptionPane.showMessageDialog(null, message,"Error", JOptionPane.ERROR_MESSAGE);
   		}
   	}
 }

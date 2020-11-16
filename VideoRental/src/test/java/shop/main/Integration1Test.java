@@ -10,15 +10,7 @@ import shop.data.Video;
 import shop.data.Inventory;
 import java.util.Iterator;
 
-// TODO:
-// write an integration test that tests the data classes.
-// add in some videos, check out, check in, delete videos, etc.
-// check that errors are reported when necessary.
-// check that things are going as expected.
 public class Integration1Test {
-//  public TEST1(String name) {
-//    super(name);
-//  }
 
   private Inventory _inventory = Data.newInventory();
 
@@ -42,8 +34,6 @@ public class Integration1Test {
     Assertions.assertTrue(Data.newAddCmd(_inventory, v1, 5).run());
     Assertions.assertEquals(1, _inventory.size());
     check(v1,10,0,0);
-    
-    // TODO  
     
     Video v2 = Data.newVideo("Title2", 2001, "Director2");
 	Assertions.assertTrue(Data.newAddCmd(_inventory, v2, 1).run());
