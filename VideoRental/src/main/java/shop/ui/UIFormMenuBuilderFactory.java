@@ -29,5 +29,4 @@ public class UIFormMenuBuilderFactory <P,T> implements UIFormMenuBuilder {
 			throw new IllegalArgumentException();
 		_menu.add(new UIPairFactory(p,t));
 	}
-
 }
