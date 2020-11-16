@@ -1,3 +1,4 @@
+
 # Video Rental Store Application
 
 Application used to simulate how a video rental store's database would operate.
