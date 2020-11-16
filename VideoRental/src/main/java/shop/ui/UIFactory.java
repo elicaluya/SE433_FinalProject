@@ -10,7 +10,6 @@ public class UIFactory implements UI{
 	static private BufferedReader _in;
 	static private PrintStream _out;
   	static private Boolean typeText;
-  
   	
   	public UIFactory (String s) {
 		if (s.equals("pop")) {
@@ -22,7 +21,6 @@ public class UIFactory implements UI{
   		    _out = System.out;
   		}
   	}
-
   
     private String getResponse() {
         String result;
@@ -35,8 +33,7 @@ public class UIFactory implements UI{
         	throw new UIError(); // input closed
         }
         return result;
-     }
-    
+  	}
     
     public void runMenuAction(UIFormMenu menu,String response) {
     	int selection;
@@ -49,8 +46,7 @@ public class UIFactory implements UI{
 		    }
     	menu.runAction((UIMenuAction) menu.getT(selection));
     }
-    
-  	
+
   	@Override
   	public void processMenu(UIFormMenu menu) {
   		if (typeText) {
@@ -62,10 +58,10 @@ public class UIFactory implements UI{
   		    }
 
   		    String response = getResponse();
-  		  
+
   		    runMenuAction(menu,response);
   		}
-  		
+
   		else {
   			StringBuffer b = new StringBuffer();
   		    b.append(menu.getHeading());
@@ -81,14 +77,13 @@ public class UIFactory implements UI{
   		    String response = JOptionPane.showInputDialog(b.toString());
   		    runMenuAction(menu,response);
   		}
-	
   	}
 
   	@Override
   	public String[] processForm(UIFormMenu form) {
   		String[] s = new String [form.size()];
 		int i = 0;
-  		
+
   		if (typeText) {
   			while (i < form.size()) {
   				_out.print(form.getP(i));
@@ -118,7 +113,7 @@ public class UIFactory implements UI{
   				}
   			}
   		}
-  		
+
   		return s;
   	}
 
@@ -130,7 +125,6 @@ public class UIFactory implements UI{
   		else {
   			JOptionPane.showMessageDialog(null,message);
   		}
-	
   	}
 
   	@Override
@@ -141,6 +135,5 @@ public class UIFactory implements UI{
   		else {
   			JOptionPane.showMessageDialog(null,message,"Error",JOptionPane.ERROR_MESSAGE);
   		}
-	
   	}
 }
